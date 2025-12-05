@@ -1,20 +1,26 @@
 /* styles.css */
 
-/* Target the label elements within the form */
+/* 1. This makes the overall <label> stack vertically */
 #login-form label {
-    /* The key change: Forces the label to act like a paragraph, 
-       taking up its own line. */
-    display: block; 
-    
-    /* Optional: Adds space below the label and input box for separation. */
+    display: block;
+    /* Adds space between the Email group and the Password group */
     margin-bottom: 15px; 
+    /* Ensures the label text itself is displayed block-level */
+    width: 100%;
 }
 
-/* Optional: Make the input fields take up the full width of the label */
-#login-form input[type="email"],
-#login-form input[type="password"] {
-    width: 100%;
-    padding: 8px; /* Adds internal spacing */
-    box-sizing: border-box; /* Ensures padding doesn't increase total width */
-    margin-top: 5px; /* Separates the input from the label text */
+/* 2. This forces the input field to drop below the label text (Email/Password) */
+#login-form input {
+    display: block; 
+    width: 100%; /* Makes the input box stretch across the form area */
+    padding: 8px;
+    margin-top: 5px; /* Adds a little space between the text and the box */
+    box-sizing: border-box; 
+}
+
+/* Optional: Clean up the Log In button alignment */
+#login-form button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
 }
