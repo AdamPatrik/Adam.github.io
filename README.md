@@ -14,11 +14,11 @@
       <input type="hidden" id="returnTo" name="returnTo" value="">
 
       <label for="email">Email
-        <p><input id="email" name="email" type="email" required autocomplete="email" />
+        <input id="email" name="email" type="email" required autocomplete="email" />
       </label>
 
       <label for="password">Password
-        <p><input id="password" name="password" type="password" required autocomplete="current-password" />
+        <input id="password" name="password" type="password" required autocomplete="current-password" />
       </label>
 
       <button type="submit" id="submitBtn">Log In</button>
