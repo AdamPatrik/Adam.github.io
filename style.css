@@ -10,3 +10,24 @@ label {
 <label for="email">Email
   <input id="email" name="email" type="email" required autocomplete="email" />
 </label>
+
+/* styles.css */
+
+/* Target the label elements within the form */
+#login-form label {
+    /* The key change: Forces the label to act like a paragraph, 
+       taking up its own line. */
+    display: block; 
+    
+    /* Optional: Adds space below the label and input box for separation. */
+    margin-bottom: 15px; 
+}
+
+/* Optional: Make the input fields take up the full width of the label */
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 8px; /* Adds internal spacing */
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
+    margin-top: 5px; /* Separates the input from the label text */
+}
