@@ -1,26 +1,104 @@
 /* styles.css */
 
-/* 1. This makes the overall <label> stack vertically */
-#login-form label {
-    display: block;
-    /* Adds space between the Email group and the Password group */
-    margin-bottom: 15px; 
-    /* Ensures the label text itself is displayed block-level */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Start from the top */
+    padding-top: 50px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Container for the form */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 400px;
 }
 
-/* 2. This forces the input field to drop below the label text (Email/Password) */
-#login-form input {
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* THIS IS THE KEY TO STACKING THE LAYOUT */
+#login-form label {
+    /* Forces the entire label block (text + input) onto its own line */
     display: block; 
-    width: 100%; /* Makes the input box stretch across the form area */
-    padding: 8px;
-    margin-top: 5px; /* Adds a little space between the text and the box */
-    box-sizing: border-box; 
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: bold;
 }
 
-/* Optional: Clean up the Log In button alignment */
-#login-form button {
-    display: block;
+#login-form input {
+    /* Forces the input box to start on a new line below the label text */
+    display: block; 
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; /* Adds space between "Email" text and the input box */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding/border in the element's total width */
+}
+
+#submitBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
     margin-top: 20px;
-    padding: 10px 20px;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Error/Message display */
+#message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    text-align: center;
+    visibility: hidden; /* Start hidden */
+}
+
+#message.error {
+    visibility: visible;
+    background-color: #fdd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+#message.success {
+    visibility: visible;
+    background-color: #dfd;
+    color: #4f8a10;
+    border: 1px solid #4f8a10;
+}
+
+/* Link styling */
+.note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.muted-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.muted-link:hover {
+    text-decoration: underline;
 }
