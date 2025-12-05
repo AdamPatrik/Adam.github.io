@@ -7,3 +7,6 @@ label {
     display: block;
     margin-bottom: 10px; /* Optional: Adds spacing below the label/input group */
 }
+<label for="email">Email
+  <input id="email" name="email" type="email" required autocomplete="email" />
+</label>
