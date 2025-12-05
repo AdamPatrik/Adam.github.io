@@ -1,0 +1,9 @@
+/* styles.css (Add this to your stylesheet) */
+
+/* Makes each label act as a block, taking up full width
+   and forcing the next element (the next label/input) 
+   to start on a new line. */
+label {
+    display: block;
+    margin-bottom: 10px; /* Optional: Adds spacing below the label/input group */
+}
