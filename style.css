@@ -1,104 +1,86 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Start from the top */
-    padding-top: 50px;
-    margin: 0;
-    min-height: 100vh;
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --accent-hover:#1e4fb5;
+  --muted:#6b7280;
+  --radius:10px;
+  --gap:12px;
+  font-size:16px;
 }
 
-/* Container for the form */
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#eef3fb);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+.center{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
 }
 
-/* THIS IS THE KEY TO STACKING THE LAYOUT */
-#login-form label {
-    /* Forces the entire label block (text + input) onto its own line */
-    display: block; 
-    margin-bottom: 15px;
-    color: #555;
-    font-weight: bold;
+.login-form{
+  width:100%;
+  max-width:380px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 20px rgba(15,23,42,0.08);
 }
 
-#login-form input {
-    /* Forces the input box to start on a new line below the label text */
-    display: block; 
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px; /* Adds space between "Email" text and the input box */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Includes padding/border in the element's total width */
+.form-title{
+  margin:0 0 18px 0;
+  font-size:1.25rem;
+  font-weight:600;
+  color:#0f172a;
 }
 
-#submitBtn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 20px;
+.form-label{
+  display:block;
+  margin:0 0 6px 0;
+  font-size:.95rem;
+  color:var(--muted);
 }
 
-#submitBtn:hover {
-    background-color: #0056b3;
+.form-input{
+  display:block;
+  width:100%;
+  padding:10px 12px;
+  margin:0 0 var(--gap) 0;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  font-size:1rem;
+  background:#fff;
+  transition:box-shadow .12s, border-color .12s;
 }
 
-/* Error/Message display */
-#message {
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 4px;
-    text-align: center;
-    visibility: hidden; /* Start hidden */
+.form-input:focus{
+  outline: none;
+  border-color: rgba(37,99,235,0.9);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
 }
 
-#message.error {
-    visibility: visible;
-    background-color: #fdd;
-    color: #d8000c;
-    border: 1px solid #d8000c;
+.btn-primary{
+  width:100%;
+  padding:11px 14px;
+  background:var(--accent);
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .12s, transform .06s;
 }
 
-#message.success {
-    visibility: visible;
-    background-color: #dfd;
-    color: #4f8a10;
-    border: 1px solid #4f8a10;
-}
-
-/* Link styling */
-.note {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.muted-link {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.muted-link:hover {
-    text-decoration: underline;
-}
+.btn-primary:hover{ background:var(--accent-hover) }
+.btn-primary:active{ transform:translateY(1px) }
