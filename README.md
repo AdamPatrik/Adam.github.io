@@ -13,13 +13,13 @@
     <form id="login-form" novalidate>
       <input type="hidden" id="returnTo" name="returnTo" value="">
 
-      <label for="email">Email<br>
-        <input id="email" name="email" type="email" required autocomplete="email" />
-      </label>
+    <label for="email">Email
+  <input id="email" name="email" type="email" required autocomplete="email" />
+</label>
 
-      <label for="password">Password<br>
-        <input id="password" name="password" type="password" required autocomplete="current-password" />
-      </label>
+<label for="password">Password
+  <input id="password" name="password" type="password" required autocomplete="current-password" />
+</label>
 
       <button type="submit" id="submitBtn">Log In</button>
 
